@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("img/fundo3.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.to-do-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background-color: #161722;
+  padding: 30px 10px;
+  border-radius: 20px;
+  color: #d3bbd3;
+  width: 450px;
+}
+.to-do-add {
+ display:flex;
+ gap: 5px;
+ 
+}
+#add-tarefa {
+  background-color: transparent;
+  padding: 4px;
+  border: none;
+  border-bottom: 2px solid #d3bbd3;
+  width: 100%;
+  font-size: 15px;
+  color: #d3bbd3;
+}
+.enviar {
+  background-color: transparent;
+  color: #d3bbd3;
+  border: none;
+  font-size: 18px;
+  padding: 5px;
+}
+.enviar:hover {
+  color: #8d598d;
+}
+.tarefa {
+  display:flex;
+  gap: 5px;
+  background-color: #1f2231;
+  padding: 15px;
+  margin-top: 25px;
+  border-radius: 8px;
+  font-size: 18px;
+}
+.button {
+  display: flex;
+  gap: 8px;  
+}
+.acao-b {
+  color: #d3bbd3;
+  background-color: transparent;
+  border: none;
+  font-size: 17px;
+} 
+.acao-b i {
+pointer-events: none;
+}
+.acao-b:hover {
+  color: #8d598d;
+}
+.descricao {
+  width: 100%;
+}
+.gato {
+  width: 50px;
+  height: auto;
+}
+.logo {
+  display: flex;
+  gap: 70px;
+  padding: 0 10px;
+}
+.tarefaConcluida {
+  text-decoration: line-through;
+  color: #4c4d53;
+}

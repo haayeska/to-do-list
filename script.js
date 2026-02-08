@@ -20,23 +20,21 @@ function criarTarefa(texto , id) {
     </div>
   `;
 };
-
 enviarBtn.addEventListener('click', function() {
  const tarefa = {
- novaTarefa : addTarefa.value,
+ descricao : addTarefa.value,
  id : Date.now(),
- concluida : false
+ status : false,
  };
 
  listaTarefas.push(tarefa);
  exibirTarefa(tarefa);
  
  addTarefa.value = '';
- console.log(listaTarefas);
+ console.log(tarefa);
 });
-
 function exibirTarefa(tarefa) {
- tarefas.innerHTML += criarTarefa(tarefa.novaTarefa, tarefa.id);
+ tarefas.innerHTML += criarTarefa(tarefa.descricao, tarefa.id);
 };
 
 tarefas.addEventListener('click', function(event) {
@@ -50,19 +48,22 @@ tarefas.addEventListener('click', function(event) {
   }
 });
  
-tarefas.addEventListener('click', function(event) {
+function atualizarEstilo(tarefaDiv,status){
+ tarefaDiv.classList.toggle('tarefaConcluida', status);
+};
+function atualizarTarefa(id, status) {
+  const tarefa = listaTarefas.find(t => t.id === id);
+  if (tarefa) {
+    tarefa.status = status;
+  }
+}
+tarefas.addEventListener('click', (event) => {
   if (event.target.type === 'checkbox') {
-    
     const tarefaDiv = event.target.closest('.tarefa');
     const id = Number(tarefaDiv.dataset.id);
-    const tarefa = listaTarefas.find(t => t.id === id);
-    
-    tarefa.concluida = event.target.checked;
+    const status = event.target.checked;
 
-    if (tarefa.concluida) {
-      tarefaDiv.classList.add('tarefaConcluida');
-    } else {
-      tarefaDiv.classList.remove('tarefaConcluida');
-    }
+    atualizarTarefa(id, status);
+    atualizarEstilo(tarefaDiv, status);
   }
 });

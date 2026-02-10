@@ -20,6 +20,9 @@ function criarTarefa(texto , id) {
     </div>
   `;
 };
+function exibirTarefa(tarefa) {
+ tarefas.innerHTML += criarTarefa(tarefa.descricao, tarefa.id);
+};
 enviarBtn.addEventListener('click', function() {
  const tarefa = {
  descricao : addTarefa.value,
@@ -33,9 +36,6 @@ enviarBtn.addEventListener('click', function() {
  addTarefa.value = '';
  console.log(tarefa);
 });
-function exibirTarefa(tarefa) {
- tarefas.innerHTML += criarTarefa(tarefa.descricao, tarefa.id);
-};
 
 tarefas.addEventListener('click', function(event) {
  if (event.target.classList.contains('deletarBtn')) {

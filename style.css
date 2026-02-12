@@ -14,7 +14,7 @@ body {
 .to-do-list {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 10px;
   background-color: #161722;
   padding: 30px 10px;
   border-radius: 20px;
@@ -26,9 +26,9 @@ body {
  gap: 5px;
  
 }
-#add-tarefa {
+#tarefa-input {
   background-color: transparent;
-  padding: 4px;
+  padding: 5px;
   border: none;
   border-bottom: 2px solid #d3bbd3;
   width: 100%;
@@ -73,16 +73,20 @@ pointer-events: none;
 .descricao {
   width: 100%;
 }
-.gato {
+.icone {
   width: 50px;
   height: auto;
 }
 .logo {
   display: flex;
   gap: 70px;
-  padding: 0 10px;
+  padding: 0 10px 20px 10px;
 }
 .tarefaConcluida {
   text-decoration: line-through;
   color: #4c4d53;
+}
+#alerta {
+  color: #795252;
+  padding: 0 5px;
 }

@@ -12,23 +12,25 @@
   <body>
     <div class="to-do-list">
       <div class="logo">
-      <img class="gato" src="img/algodao.png">
-      <h1>My to-do list</h1> 
+       <img class="icone" src="img/algodao.png">
+       <h1>My to-do list</h1> 
       </div>
       
       <!-- campo add tarefas -->
       <form class="to-do-add">
-        <input type="text" id="add-tarefa" name="add-tarefa" placeholder="nova tarefa...">
+        <input type="text" id="tarefa-input" name="tarefa-input" placeholder="nova tarefa...">
+
         <button type="button" class="enviar">
           <i class="fa-solid fa-plus"></i>
         </button>
       </form>
-      
+
+      <!-- mensagem alerta -->
+      <div id="alerta"></div>
+
       <!-- descricao da tarefa -->
-      <div class="tarefas">
-    
-      </div>
+      <div class="tarefas"></div>
     </div>
-   <script src="script.js"></script>
+    <script type="module" src="js/script.js"></script>
   </body>
 </html>
